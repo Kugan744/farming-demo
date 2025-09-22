@@ -1,0 +1,191 @@
+/* --- CSS Variables for Easy Theming --- */
+:root {
+  --primary-color: #27ae60;
+  --secondary-color: #2c3e50;
+  --background-light: #ffffff;
+  --background-dark: #f0f4f8;
+  --text-light: #ffffff;
+  --text-dark: #34495e;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.pageWrapper {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-dark);
+}
+
+/* --- Header --- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: var(--background-light);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.navigation a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navigation a:hover {
+  color: var(--primary-color);
+}
+
+/* --- Hero Section --- */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  text-align: center;
+  color: var(--text-light);
+  /* 
+    New background image that symbolizes the farm.
+    This image is from Unsplash (by Gabriel Gurrola), which offers royalty-free images.
+  */
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
+}
+
+.heroContent {
+  max-width: 800px;
+  padding: 0 20px; /* Added some padding for better text presentation */
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+/* --- General Section Styling --- */
+.section {
+  padding: 4rem 5%;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--secondary-color);
+}
+
+.darkSection {
+  background-color: var(--background-dark);
+}
+
+/* --- Product Grid & Cards --- */
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.productCard {
+  background-color: var(--background-light);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.productCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.cardImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.placeholderImage {
+  width: 100%;
+  height: 100%;
+}
+
+.cardContent {
+  padding: 1.5rem;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--secondary-color);
+}
+
+.cardDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* --- Card Variations --- */
+.lightCard {
+  background-color: var(--background-light);
+}
+
+/* --- Footer --- */
+.footer {
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  padding-top: 3rem;
+}
+
+.footerContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 0 5% 3rem;
+}
+
+.footerColumn h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.footerColumn p, .socialLinks a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  line-height: 1.8;
+}
+
+.socialLinks {
+  display: flex;
+  flex-direction: column;
+}
+
+.socialLinks a {
+  transition: color 0.3s;
+  width: fit-content;
+}
+
+.socialLinks a:hover {
+  color: var(--primary-color);
+}
+
+.footerBottom {
+  text-align: center;
+  padding: 1rem 5%;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
